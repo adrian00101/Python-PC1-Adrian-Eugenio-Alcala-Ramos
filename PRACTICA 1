@@ -1,0 +1,128 @@
+# Problema 1
+nombre = input("Ingrese su nombre de usuario: ")
+print(f"¡Hola {nombre}!")
+
+
+
+
+# Problema 2
+# Calcular propina
+consumo = float(input("Ingrese el monto de su consumo en el restaurante: "))
+propina = float(input("Ingrese el porcentaje de propina que desea dejar: "))
+monto_propina = consumo * (propina / 100)
+print(f"La cantidad de dinero a dejar como propina es: ${monto_propina:.2f}")
+
+
+
+# Problema 3
+# Peso total de payasos y muñecas
+payasos = int(input("Ingrese el número de payasos vendidos: "))
+munecas = int(input("Ingrese el número de muñecas vendidas: "))
+peso_total = payasos * 112 + munecas * 75
+print(f"El peso total del paquete es: {peso_total} gramos")
+
+
+
+
+# Problema 4
+# Suma de enteros hasta N
+N = int(input("Ingrese un número entero positivo: "))
+suma = N * (N + 1) // 2
+print(f"La suma de los enteros desde 1 hasta {N} es: {suma}")
+
+
+
+
+# Problema 5
+# Verificar si vio más de 3 shows
+shows = int(input("¿Cuántos shows musicales ha visto en el último año?: "))
+print(shows > 3)
+
+
+
+
+# Problema 6
+# Precio de entrada según edad
+edad = int(input("Ingrese su edad: "))
+if edad < 4:
+    print("La entrada es gratis")
+elif edad <= 18:
+    print("El precio de la entrada es $5")
+else:
+    print("El precio de la entrada es $10")
+
+
+
+
+
+# Problema 7
+# Operaciones con menú
+a = float(input("Ingrese el primer número: "))
+b = float(input("Ingrese el segundo número: "))
+print("Elija una opción: \n1. Suma\n2. Resta\n3. Multiplicación")
+opcion = input("Ingrese el número de la opción: ")
+
+if opcion == "1":
+    print(f"La suma es: {a + b}")
+elif opcion == "2":
+    print(f"La resta es: {a - b}")
+elif opcion == "3":
+    print(f"La multiplicación es: {a * b}")
+else:
+    print("Opción no correcta")
+
+
+
+
+# Problema 8
+# Identificar hora de comida
+hora = input("Ingrese la hora en formato HH:MM: ")
+horas, minutos = hora.split(":")
+tiempo = int(horas) + int(minutos) / 60
+
+if 7 <= tiempo <= 8:
+    print("Es hora de desayunar")
+elif 12 <= tiempo <= 13:
+    print("Es hora de almorzar")
+elif 18 <= tiempo <= 19:
+    print("Es hora de cenar")
+
+
+
+# Problema 9
+# Ahorros con interés compuesto
+deposito = float(input("Ingrese la cantidad depositada en la cuenta de ahorros: "))
+tasa = 0.04
+saldo = deposito
+for anio in range(1, 4):
+    saldo *= (1 + tasa)
+    print(f"Ahorros tras el año {anio}: ${saldo:.2f}")
+
+
+
+
+# Problema 10
+# Resolver ecuación cuadrática
+import math
+a = float(input("Ingrese el valor de a: "))
+b = float(input("Ingrese el valor de b: "))
+c = float(input("Ingrese el valor de c: "))
+
+if a == 0 and b == 0 and c == 0:
+    print("Todos los números son solución")
+elif a == 0 and b == 0:
+    print("Ecuación no presenta solución real")
+elif a == 0:
+    x = -c / b
+    print(f"Solución única: x = {x}")
+else:
+    discriminante = b**2 - 4*a*c
+    if discriminante < 0:
+        print("Ecuación no presenta solución real")
+    elif discriminante == 0:
+        x = -b / (2*a)
+        print(f"Solución única: x = {x}")
+    else:
+        x1 = (-b + math.sqrt(discriminante)) / (2*a)
+        x2 = (-b - math.sqrt(discriminante)) / (2*a)
+        print(f"Dos soluciones: x1 = {x1}, x2 = {x2}")
